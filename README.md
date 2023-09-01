@@ -63,6 +63,13 @@ Prometheus is a popular choice for Kubernetes monitoring for several reasons:
 ![Alt text](https://prometheus.io/assets/architecture.png)
 
 <br></br>
+Prometheus server: The Prometheus server is the central component of the architecture. It collects metrics from targets, stores them in a time series database, and executes rules to generate alerts.
+The Prometheus server stores the scraped metrics in a time series database. A time series database is a database that is optimized for storing time-series data. The Prometheus server uses a custom time series database called PrometheusDB.
+
+Prometheus client: The Prometheus client is a library that can be used to instrument applications to expose metrics.
+Push gateway: The push gateway is a component that can be used to collect metrics from short-lived jobs.A short-lived job is a job that does not have a stable IP address or that does not expose metrics in a way that Prometheus can scrape.
+Alertmanager: The Alertmanager is a component that receives alerts from Prometheus and handles them.The Alertmanager handles alerts by routing them to different destinations, such as email, Slack, or PagerDuty. 
+Grafana: Grafana is a visualization tool that can be used to display the data collected by Prometheus. Grafana can be used to create dashboards that show metrics in a variety of ways.
 
 ## What is Grafana ?
 
